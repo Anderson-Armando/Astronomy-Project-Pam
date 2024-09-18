@@ -2,7 +2,17 @@ namespace PAM_Astronomy.Views;
 
 public partial class AstronomicalBodiesView : ContentPage
 {
-	public AstronomicalBodiesView()
+    string astroName;
+    public string AstroName
+    {
+        get => astroName;
+        set
+        {
+            astroName = value;
+        }
+    }
+
+    public AstronomicalBodiesView()
 	{
 		InitializeComponent();
 

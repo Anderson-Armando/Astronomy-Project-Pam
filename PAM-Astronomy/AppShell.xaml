@@ -17,6 +17,8 @@
         <ShellContent Title="Moon" Icon="moon.png" ContentTemplate="{DataTemplate local:MoonPhaseView}"/>
 
         <ShellContent Title="Daylight" Icon="sun.png" ContentTemplate="{DataTemplate local:SunriseView}" />
+
+        <ShellContent Title="Bodies" Icon="comet.png" ContentTemplate="{DataTemplate local:AstronomicalBodiesView}"/>
     </FlyoutItem>
 
     <FlyoutItem>

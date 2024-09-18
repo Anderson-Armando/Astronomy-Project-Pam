@@ -1,5 +1,7 @@
 namespace PAM_Astronomy.Views;
 
+using PAM_Astronomy.Models;
+
 [QueryProperty(nameof(AstroName), "astroName")]
 
 public partial class AstronomicalBodyView : ContentPage
@@ -24,7 +26,7 @@ public partial class AstronomicalBodyView : ContentPage
 	{
 		AstronomicalBodyView body = FindAstroData(astroName);
 
-        Title = body.Title;
+		Title = body.Name;
 
         lblIcon.Text = body.EmojiIcon;
 		lblName.Text = body.Name;
@@ -38,9 +40,10 @@ public partial class AstronomicalBodyView : ContentPage
 		return astronomicalBodyName switch
 		{
 			"comet" => SolarSystemData.HalleysComet,
-			"earth" => SolarSystemData.Earth,
+            "earth" => SolarSystemData.Earth,
 			"moon" => SolarSystemData.Moon,
-			"sun" => SolarSystemData.Sun, _=> throw new ArgumentException()
+			"sun" => SolarSystemData.Sun, 
+			_=> throw new ArgumentException()
 		};
 	}
 
